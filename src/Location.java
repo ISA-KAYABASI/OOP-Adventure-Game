@@ -1,21 +1,17 @@
+import javax.security.sasl.SaslClient;
+import java.util.Scanner;
+
 public abstract class Location {
 
-    private String locationName;
     private Player player;
+    private String name;
+    public static Scanner input = new Scanner(System.in);
 
+    public abstract boolean onLocation();
 
-
-    public Location(Player player) {
-        this.locationName = locationName;
+    public Location(Player player, String name) {
         this.player = player;
-    }
-
-    public String getLocationName() {
-        return locationName;
-    }
-
-    public void setLocationName(String locationName) {
-        this.locationName = locationName;
+        this.name = name;
     }
 
     public Player getPlayer() {
@@ -24,5 +20,13 @@ public abstract class Location {
 
     public void setPlayer(Player player) {
         this.player = player;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

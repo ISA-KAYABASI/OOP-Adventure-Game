@@ -52,8 +52,9 @@ public class Player {
                 " \tDamage: "+this.getDamage()+
                 " \tHealth: "+ this.getHealth()+
                 " \tMoney: "+this.getMoney());
-
     }
+
+
     public void initPlayer(GameChar gameChar) {
         this.setDamage(gameChar.getDamage());
         this.setHealth(gameChar.getHealth());
