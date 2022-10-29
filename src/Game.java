@@ -15,6 +15,7 @@ public class Game {
 
         Location location = null;
         while(true) {
+
             System.out.println();
             System.out.println("############ Places ############");
             System.out.println();
