@@ -64,14 +64,16 @@ public class Player {
         this.setCharName(gameChar.getName());
     }
 
-//    public void printInfo() {
-//        System.out.println(
-//                "Your Weapon :" + this.getInventory().getWeapon().getName() +
-//                        "Your Damage :" + this.getDamage() +
-//                        "Your health :" + this.getHealth() +
-//                        "Your money : " + this.getMoney()
-//        );
-//    }
+    public void printInfo() {
+        System.out.println(
+                "  #Your Weapon : " + this.getInventory().getWeapon().getName() +
+                        "  # Your Armor : " + this.getInventory().getArmor().getName() +
+                        "  # Your Block : " + this.getInventory().getArmor().getBlock() +
+                        "  # Your Damage : " + this.getDamage() +
+                        "  # Your health : " + this.getHealth() +
+                        "  # Your money : " + this.getMoney()
+        );
+    }
 
     public String getName() {
         return name;

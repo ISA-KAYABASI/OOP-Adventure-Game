@@ -1,23 +1,34 @@
-public class Armors {
+public class Armor {
 
-    private String name;
     private int id;
+    private String name;
     private int block;
     private int price;
 
-    public Armors(String name, int id, int block, int price) {
+    public Armor(String name, int id, int block, int price) {
         this.name = name;
         this.id = id;
         this.block = block;
         this.price = price;
     }
-    public static Armors[] armors() {
-        Armors[] armorList = new Armors[3];
-        armorList[0] = new Armors("Kalkan",1,1,25);
-        armorList[1] = new Armors("Ejder kalkan",2,3,35);
-        armorList[2] = new Armors("Hiperwawe kalkan",3,5,45);
+    public static Armor[] armors() {
+        Armor[] armorList = new Armor[3];
+        armorList[0] = new Armor("Demir Kalkan    ",1,1,15);
+        armorList[1] = new Armor("Ejder kalkan    ",2,3,25);
+        armorList[2] = new Armor("Hiperwawe kalkan",3,5,40);
         return armorList;
     }
+
+    public static Armor getArmorObjById(int id) {
+        for (Armor a : Armor.armors()){
+            if (a.getId() == id) {
+                return a;
+            }
+        }
+        return null;
+    }
+
+
 
     public String getName() {
         return name;
@@ -45,6 +56,14 @@ public class Armors {
 
     public int getPrice() {
         return price;
+    }
+
+    public int getBlock() {
+        return block;
+    }
+
+    public void setBlock(int block) {
+        this.block = block;
     }
 
     public void setPrice(int price) {
