@@ -21,6 +21,9 @@ public class Game {
             System.out.println();
             System.out.println("1 - Safe House --> This place is safe for you, no enemies");
             System.out.println("2 - Store --> You can buy weapon or armor");
+            System.out.println("3 - Demonic Cave --> Be careful zombies can show up ! Award = Food");
+            System.out.println("4 - Dark Forest --> Be careful wampires can show up ! Award = Firewood");
+            System.out.println("5 - Bloody River --> Be careful bears can show up ! Award = Water");
             System.out.println("0 - Finish the game ");
             System.out.print("Please enter the place you want to go : ");
             int selectLoc = input.nextInt();
@@ -33,6 +36,15 @@ public class Game {
                     break;
                 case 2:
                     location = new ToolStore(player);
+                    break;
+                case 3:
+                    location = new Cave(player);
+                    break;
+                case 4:
+                    location = new Forest(player);
+                    break;
+                case 5:
+                    location = new River(player);
                     break;
                 default:
                     location = new SafeHouse(player);
