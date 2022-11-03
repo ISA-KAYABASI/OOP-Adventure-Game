@@ -64,7 +64,7 @@ public abstract class BattleLoc extends Location{
             }
             if (this.getObstacle().getHealth() < this.getPlayer().getHealth()){
                 System.out.println("You defeated the enemies ");
-                System.out.println(" You gain " + this.getObstacle().getAward() + " awards");
+                System.out.println("You gain " + this.getObstacle().getAward() + " awards");
                 this.getPlayer().setMoney(this.getPlayer().getMoney() + this.getObstacle().getAward());
                 System.out.println("Your current money is " + this.getPlayer().getMoney());
             }else{
